@@ -22,45 +22,49 @@
         .logo {
             width: 200px;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
+        nav a {
             color: #d4af37;
             text-decoration: none;
             font-weight: bold;
+            font-size: 18px;
         }
         .hero {
             text-align: center;
             padding: 50px;
-        }
-        .hero img {
-            max-width: 100%;
-            height: auto;
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            color: white;
         }
         .container {
             max-width: 1200px;
             margin: auto;
-            padding: 20px;
-            text-align: center;
+            padding: 40px;
         }
         .cta-button {
             display: inline-block;
             background-color: #d4af37;
             color: #000;
-            padding: 10px 20px;
+            padding: 15px 30px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
+            margin-top: 20px;
+        }
+        .services, .about, .contact {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .services h2, .about h2, .contact h2 {
+            margin-bottom: 20px;
         }
         footer {
             background-color: #111;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
         }
     </style>
@@ -69,29 +73,25 @@
     <header>
         <img src="logo.png" alt="Big New" class="logo">
         <nav>
-            <ul>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
     
     <section class="hero">
         <h1>Bem-vindo à Big New</h1>
-        <p>Soluções financeiras para você</p>
-        <a href="#contato" class="cta-button">Entre em Contato</a>
+        <p>Soluções financeiras confiáveis e seguras para você!</p>
+        <a href="#contato" class="cta-button">Fale Conosco</a>
     </section>
     
     <div class="container">
-        <section id="sobre">
-            <h2>Missão, Visão e Valores</h2>
-            <p><strong>Missão:</strong> Oferecer soluções financeiras acessíveis e seguras para aposentados, pensionistas e trabalhadores.</p>
-            <p><strong>Visão:</strong> Ser referência nacional em crédito consignado e soluções financeiras.</p>
-            <p><strong>Valores:</strong> Transparência, Compromisso, Ética e Atendimento Humanizado.</p>
+        <section id="sobre" class="about">
+            <h2>Sobre a Big New</h2>
+            <p>Somos especializados em crédito consignado, consórcios e antecipação de FGTS, sempre com as melhores taxas do mercado.</p>
         </section>
     
-        <section id="servicos">
+        <section id="servicos" class="services">
             <h2>Nossos Serviços</h2>
             <ul>
                 <li>Empréstimo Consignado para Aposentados e Pensionistas</li>
@@ -101,29 +101,14 @@
             </ul>
         </section>
     
-        <section id="bancos">
-            <h2>Bancos Parceiros</h2>
-            <p>Trabalhamos com os principais bancos que atuam com crédito consignado, garantindo as melhores taxas e condições para você.</p>
-        </section>
-    
-        <section id="vantagens">
-            <h2>Vantagens do Consignado</h2>
-            <p>Taxas reduzidas, prazos estendidos, crédito sem burocracia e disponível para negativados.</p>
-        </section>
-    
-        <section id="depoimentos">
-            <h2>O que nossos clientes dizem</h2>
-            <p>"A Big New me ajudou a obter um crédito consignado com condições excelentes!" - Cliente Satisfeito</p>
+        <section id="contato" class="contact">
+            <h2>Contato</h2>
+            <p><strong>Telefone:</strong> <a href="tel:+5511932334083">(11) 93233-4083</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511932334083" target="_blank">Fale Conosco</a></p>
+            <p><strong>Endereço:</strong> Rua Santa Luzia, 48, Conj 86, Liberdade - São Paulo/SP</p>
+            <p><strong>CNPJ:</strong> 52.149.352/0001-07</p>
         </section>
     </div>
-    
-    <section id="contato" class="container">
-        <h2>Entre em Contato</h2>
-        <p>Telefone: <a href="tel:+5511932334083">(11) 93233-4083</a></p>
-        <p>Instagram: <a href="https://www.instagram.com/yuricorban" target="_blank">@yuricorban</a></p>
-        <p>WhatsApp: <a href="https://wa.me/5511932334083" target="_blank">Fale Conosco</a></p>
-        <p>Endereço: Atendimento online das 08h às 17h</p>
-    </section>
     
     <footer>
         <p>&copy; 2025 Big New. Todos os direitos reservados.</p>
