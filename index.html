@@ -19,8 +19,8 @@
             padding: 20px;
             text-align: center;
         }
-        h1 {
-            margin: 0;
+        .logo {
+            width: 200px;
         }
         nav ul {
             list-style-type: none;
@@ -35,23 +35,39 @@
             text-decoration: none;
             font-weight: bold;
         }
-        section {
+        .hero {
+            text-align: center;
+            padding: 50px;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
             padding: 20px;
             text-align: center;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
         }
         footer {
             background-color: #111;
             padding: 10px;
             text-align: center;
         }
-        a {
-            color: #d4af37;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Big New - Soluções Financeiras</h1>
+        <img src="logo.png" alt="Big New" class="logo">
         <nav>
             <ul>
                 <li><a href="#sobre">Sobre Nós</a></li>
@@ -61,39 +77,47 @@
         </nav>
     </header>
     
-    <section id="sobre">
-        <h2>Missão, Visão e Valores</h2>
-        <p><strong>Missão:</strong> Oferecer soluções financeiras acessíveis e seguras para aposentados, pensionistas e trabalhadores.</p>
-        <p><strong>Visão:</strong> Ser referência nacional em crédito consignado e soluções financeiras.</p>
-        <p><strong>Valores:</strong> Transparência, Compromisso, Ética e Atendimento Humanizado.</p>
+    <section class="hero">
+        <h1>Bem-vindo à Big New</h1>
+        <p>Soluções financeiras para você</p>
+        <a href="#contato" class="cta-button">Entre em Contato</a>
     </section>
     
-    <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <ul>
-            <li>Empréstimo Consignado para Aposentados e Pensionistas</li>
-            <li>Consórcio</li>
-            <li>Antecipação do FGTS</li>
-            <li>Car Equity (Empréstimo com Garantia de Veículo)</li>
-        </ul>
-    </section>
+    <div class="container">
+        <section id="sobre">
+            <h2>Missão, Visão e Valores</h2>
+            <p><strong>Missão:</strong> Oferecer soluções financeiras acessíveis e seguras para aposentados, pensionistas e trabalhadores.</p>
+            <p><strong>Visão:</strong> Ser referência nacional em crédito consignado e soluções financeiras.</p>
+            <p><strong>Valores:</strong> Transparência, Compromisso, Ética e Atendimento Humanizado.</p>
+        </section>
     
-    <section id="bancos">
-        <h2>Bancos Parceiros</h2>
-        <p>Trabalhamos com os principais bancos que atuam com crédito consignado, garantindo as melhores taxas e condições para você.</p>
-    </section>
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <ul>
+                <li>Empréstimo Consignado para Aposentados e Pensionistas</li>
+                <li>Consórcio</li>
+                <li>Antecipação do FGTS</li>
+                <li>Car Equity (Empréstimo com Garantia de Veículo)</li>
+            </ul>
+        </section>
     
-    <section id="vantagens">
-        <h2>Vantagens do Consignado</h2>
-        <p>Taxas reduzidas, prazos estendidos, crédito sem burocracia e disponível para negativados.</p>
-    </section>
+        <section id="bancos">
+            <h2>Bancos Parceiros</h2>
+            <p>Trabalhamos com os principais bancos que atuam com crédito consignado, garantindo as melhores taxas e condições para você.</p>
+        </section>
     
-    <section id="depoimentos">
-        <h2>O que nossos clientes dizem</h2>
-        <p>"A Big New me ajudou a obter um crédito consignado com condições excelentes!" - Cliente Satisfeito</p>
-    </section>
+        <section id="vantagens">
+            <h2>Vantagens do Consignado</h2>
+            <p>Taxas reduzidas, prazos estendidos, crédito sem burocracia e disponível para negativados.</p>
+        </section>
     
-    <section id="contato">
+        <section id="depoimentos">
+            <h2>O que nossos clientes dizem</h2>
+            <p>"A Big New me ajudou a obter um crédito consignado com condições excelentes!" - Cliente Satisfeito</p>
+        </section>
+    </div>
+    
+    <section id="contato" class="container">
         <h2>Entre em Contato</h2>
         <p>Telefone: <a href="tel:+5511932334083">(11) 93233-4083</a></p>
         <p>Instagram: <a href="https://www.instagram.com/yuricorban" target="_blank">@yuricorban</a></p>
