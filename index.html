@@ -9,63 +9,106 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #d4af37;
+            background-color: #0c0c26;
+            color: white;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #111;
-            padding: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #13133f;
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         .logo {
-            width: 200px;
+            width: 150px;
         }
         nav {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 10px;
+            gap: 30px;
         }
         nav a {
-            color: #d4af37;
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
         }
         .hero {
             text-align: center;
-            padding: 50px;
+            padding: 100px 20px;
             background: url('hero-image.jpg') no-repeat center center/cover;
             color: white;
         }
         .container {
             max-width: 1200px;
             margin: auto;
-            padding: 40px;
+            padding: 50px 20px;
         }
         .cta-button {
             display: inline-block;
-            background-color: #d4af37;
-            color: #000;
+            background-color: #00bcd4;
+            color: white;
             padding: 15px 30px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             margin-top: 20px;
         }
-        .services, .about, .contact {
-            padding: 50px 0;
-            text-align: center;
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
-        .services h2, .about h2, .contact h2 {
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #111;
+        .service-card {
+            background: #1c1c48;
             padding: 20px;
+            border-radius: 10px;
+            width: 280px;
             text-align: center;
+        }
+        .banks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 0;
+        }
+        .bank-logo {
+            width: 120px;
+        }
+        .blog {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #13133f;
+        }
+        .blog img {
+            width: 60%;
+            margin-top: 20px;
+        }
+        .footer {
+            background-color: #13133f;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            width: 30%;
+        }
+        .footer-section h4 {
+            color: #00bcd4;
+        }
+        .footer a {
+            color: white;
+            display: block;
+            text-decoration: none;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -75,6 +118,8 @@
         <nav>
             <a href="#sobre">Sobre</a>
             <a href="#servicos">Serviços</a>
+            <a href="#bancos">Bancos</a>
+            <a href="#blog">Blog</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
@@ -93,26 +138,46 @@
     
         <section id="servicos" class="services">
             <h2>Nossos Serviços</h2>
-            <ul>
-                <li>Empréstimo Consignado para Aposentados e Pensionistas</li>
-                <li>Consórcio</li>
-                <li>Antecipação do FGTS</li>
-                <li>Car Equity (Empréstimo com Garantia de Veículo)</li>
-            </ul>
+            <div class="service-card">Empréstimo Consignado</div>
+            <div class="service-card">Consórcio</div>
+            <div class="service-card">Antecipação do FGTS</div>
+            <div class="service-card">Car Equity</div>
         </section>
     
-        <section id="contato" class="contact">
-            <h2>Contato</h2>
-            <p><strong>Telefone:</strong> <a href="tel:+5511932334083">(11) 93233-4083</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511932334083" target="_blank">Fale Conosco</a></p>
-            <p><strong>Endereço:</strong> Rua Santa Luzia, 48, Conj 86, Liberdade - São Paulo/SP</p>
-            <p><strong>CNPJ:</strong> 52.149.352/0001-07</p>
+        <section id="bancos" class="banks">
+            <h2>Bancos Parceiros</h2>
+            <img src="banco1.png" class="bank-logo">
+            <img src="banco2.png" class="bank-logo">
+            <img src="banco3.png" class="bank-logo">
+            <img src="banco4.png" class="bank-logo">
+        </section>
+
+        <section id="blog" class="blog">
+            <h2>Entenda o Mercado</h2>
+            <p>Acompanhe as novidades e dicas financeiras no nosso blog.</p>
+            <img src="blog-preview.png" alt="Blog da Big New">
         </section>
     </div>
     
-    <footer>
-        <p>&copy; 2025 Big New. Todos os direitos reservados.</p>
-        <p><i class="fas fa-lock"></i> Site Seguro</p>
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p><strong>Telefone:</strong> <a href="tel:+5511932334083">(11) 93233-4083</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511932334083" target="_blank">Fale Conosco</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Serviços</h4>
+            <a href="#servicos">Empréstimo Consignado</a>
+            <a href="#servicos">Consórcio</a>
+            <a href="#servicos">Antecipação do FGTS</a>
+            <a href="#servicos">Car Equity</a>
+        </div>
+        <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <a href="https://www.instagram.com/yuricorban" target="_blank">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+        </div>
     </footer>
 </body>
 </html>
