@@ -26,7 +26,7 @@
             z-index: 1000;
         }
         .logo {
-            width: 150px;
+            height: 80px;
         }
         nav {
             display: flex;
@@ -42,7 +42,7 @@
         }
         .hero {
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px;
             background: url('hero-image.jpg') no-repeat center center/cover;
             color: white;
         }
@@ -51,25 +51,16 @@
             margin: auto;
             padding: 50px 20px;
         }
-        .cta-button {
-            display: inline-block;
-            background-color: #00bcd4;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
         .section-title {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .services, .banks {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            margin-bottom: 40px;
         }
         .service-card {
             background: #1c1c48;
@@ -87,6 +78,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            text-align: center;
         }
         .footer-section {
             width: 30%;
@@ -104,7 +96,7 @@
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Big New" class="logo">
+        <img src="logo.jpg" alt="Big New" class="logo">
         <nav>
             <a href="#sobre">Sobre</a>
             <a href="#servicos">Serviços</a>
@@ -125,29 +117,7 @@
             <h2 class="section-title">Sobre a Big New</h2>
             <p>Somos especializados em crédito consignado, consórcios e antecipação de FGTS, sempre com as melhores taxas do mercado.</p>
         </section>
-    
-        <section id="missao-visao-valores">
-            <h2 class="section-title">Missão, Visão e Valores</h2>
-            <p><strong>Missão:</strong> Oferecer soluções financeiras acessíveis e seguras para aposentados, pensionistas e trabalhadores.</p>
-            <p><strong>Visão:</strong> Ser referência nacional em crédito consignado e soluções financeiras.</p>
-            <p><strong>Valores:</strong> Transparência, Compromisso, Ética e Atendimento Humanizado.</p>
-        </section>
-    
-        <section id="servicos" class="services">
-            <h2 class="section-title">Nossos Serviços</h2>
-            <div class="service-card">Empréstimo Consignado</div>
-            <div class="service-card">Consórcio</div>
-            <div class="service-card">Antecipação do FGTS</div>
-            <div class="service-card">Car Equity</div>
-        </section>
-    
-        <section id="bancos" class="banks">
-            <h2 class="section-title">Bancos Parceiros</h2>
-            <img src="banco1.png" class="bank-logo">
-            <img src="banco2.png" class="bank-logo">
-            <img src="banco3.png" class="bank-logo">
-            <img src="banco4.png" class="bank-logo">
-        </section>
+    </div>
     
     <footer class="footer">
         <div class="footer-section">
@@ -160,10 +130,10 @@
             <p>Site seguro com certificado SSL, garantindo sua privacidade e segurança em todas as transações.</p>
         </div>
         <div class="footer-section">
-            <h4>Redes Sociais</h4>
-            <a href="https://www.instagram.com/yuricorban" target="_blank">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
+            <h4>Informações Legais</h4>
+            <p><strong>Endereço:</strong> Av. Exemplo, 123 - Centro, São Paulo - SP, 01000-000</p>
+            <p><strong>CNPJ:</strong> 52.149.352/0001-07</p>
+            <p>&copy; 2024 Big New - Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>
