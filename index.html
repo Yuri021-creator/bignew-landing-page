@@ -12,10 +12,10 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      color: #333;
-      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
       line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
     }
     header {
       background-color: #00467f;
@@ -24,31 +24,42 @@
       text-align: center;
     }
     header .logo {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: bold;
     }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+    /* Seção Hero */
     .hero {
       position: relative;
-      height: 60vh;
+      height: 70vh;
       background: url('imagens/01.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
     }
     .hero::after {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
     }
     .hero-content {
       position: relative;
-      text-align: center;
       color: #fff;
       z-index: 1;
+      padding: 20px;
     }
     .hero-content h1 {
       font-size: 48px;
@@ -58,139 +69,175 @@
       font-size: 20px;
       margin-bottom: 30px;
     }
-    .lead-form {
-      background-color: #fff;
-      padding: 40px;
-      margin: -50px auto 40px;
-      max-width: 800px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-    .lead-form h2 {
-      text-align: center;
-      margin-bottom: 20px;
+    .hero-content a {
+      background-color: #ffc107;
       color: #00467f;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
-    .lead-form form {
+    .hero-content a:hover {
+      background-color: #e0a800;
+    }
+    /* Seção Produtos */
+    .produtos {
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+    .produtos h2 {
+      text-align: center;
+      color: #00467f;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+    .produtos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .produto-card {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px;
+      width: 300px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .produto-card:hover {
+      transform: translateY(-5px);
+    }
+    .produto-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .produto-card .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+    .produto-card h3 {
+      color: #00467f;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    .produto-card p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .produto-card a {
+      display: inline-block;
+      background-color: #00467f;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .produto-card a:hover {
+      background-color: #00335a;
+    }
+    /* Seção Contato */
+    .contato {
+      padding: 40px 20px;
+      background-color: #e9ecef;
+    }
+    .contato h2 {
+      text-align: center;
+      color: #00467f;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+    .contato form {
+      max-width: 800px;
+      margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    .lead-form .form-group {
+    .contato .form-group {
       flex: 1 1 300px;
       margin: 10px;
       display: flex;
       flex-direction: column;
     }
-    .lead-form label {
+    .contato label {
       margin-bottom: 8px;
       font-weight: bold;
+      color: #00467f;
     }
-    .lead-form input,
-    .lead-form textarea {
+    .contato input, .contato textarea {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 16px;
     }
-    .lead-form button {
-      padding: 15px 30px;
+    .contato button {
       background-color: #00467f;
       color: #fff;
       border: none;
-      border-radius: 4px;
+      padding: 15px 30px;
       font-size: 18px;
+      border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
-      margin: 20px auto 0;
+      margin: 10px auto;
       display: block;
     }
-    .lead-form button:hover {
+    .contato button:hover {
       background-color: #00335a;
     }
-    .info-section {
-      padding: 40px;
-      background-color: #e9ecef;
+    /* Seção Informações da Empresa */
+    .empresa-info {
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+    .empresa-info h2 {
+      text-align: center;
+      color: #00467f;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    .info-grid {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       justify-content: center;
     }
-    .info-section .info-text {
-      flex: 1;
-      min-width: 300px;
-      padding: 20px;
-    }
-    .info-section .info-image {
-      flex: 1;
-      min-width: 300px;
-      padding: 20px;
-    }
-    .info-section .info-image img {
-      width: 100%;
+    .info-item {
+      background-color: #e9ecef;
       border-radius: 8px;
-    }
-    /* Seção de Dados da Big New */
-    .business-info {
-      background-color: #fff;
-      padding: 40px 20px;
-    }
-    .business-info .info-container {
-      max-width: 1000px;
-      margin: 0 auto;
+      margin: 10px;
+      padding: 20px;
+      width: 250px;
       text-align: center;
     }
-    .business-info h2 {
+    .info-item h3 {
       color: #00467f;
-      margin-bottom: 20px;
-    }
-    .business-info .info-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-    .business-info .info-item {
-      flex: 1 1 200px;
-      margin: 10px;
-      background: #e9ecef;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .business-info .info-item h3 {
       margin-bottom: 10px;
-      color: #00467f;
+      font-size: 20px;
     }
-    .business-info .info-item p {
+    .info-item p {
       font-size: 16px;
     }
-    /* Seção Galeria com imagens adicionais */
-    .gallery {
-      padding: 40px 20px;
-      background-color: #f0f0f0;
-      text-align: center;
-    }
-    .gallery h2 {
-      color: #00467f;
-      margin-bottom: 20px;
-    }
-    .gallery .gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .gallery .gallery-item {
-      margin: 10px;
-      flex: 1 1 200px;
-    }
-    .gallery .gallery-item img {
-      width: 100%;
-      border-radius: 8px;
-    }
+    /* Rodapé */
     footer {
       background-color: #00467f;
       color: #fff;
       text-align: center;
       padding: 20px;
+    }
+    @media (max-width: 768px) {
+      .produtos-grid, .info-grid {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -198,106 +245,81 @@
   <!-- Cabeçalho -->
   <header>
     <div class="logo">Big New</div>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+      <a href="#empresa-info">Informações</a>
+    </nav>
   </header>
-  
-  <!-- Seção Hero com imagem de fundo -->
+
+  <!-- Seção Hero -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Realize seus sonhos com crédito facilitado</h1>
-      <p>Conquiste seus objetivos com taxas competitivas e aprovação rápida</p>
+      <h1>Crédito Facilitado para Realizar Seus Sonhos</h1>
+      <p>Taxas competitivas e aprovação rápida para você conquistar seus objetivos.</p>
+      <a href="#contato">Solicite Agora</a>
     </div>
   </section>
-  
-  <!-- Seção de formulário para captação de leads -->
-  <section class="lead-form">
-    <h2>Solicite seu crédito agora</h2>
+
+  <!-- Seção Produtos -->
+  <section class="produtos" id="produtos">
+    <h2>Nossos Produtos</h2>
+    <div class="produtos-grid">
+      <!-- Produto 1: Crédito Pessoal -->
+      <div class="produto-card">
+        <img src="imagens/02.jpg" alt="Crédito Pessoal">
+        <div class="card-content">
+          <h3>Crédito Pessoal</h3>
+          <p>Obtenha crédito para suas necessidades pessoais com condições especiais e aprovação rápida.</p>
+          <a href="#contato">Saiba Mais</a>
+        </div>
+      </div>
+      <!-- Produto 2: Crédito Imobiliário -->
+      <div class="produto-card">
+        <img src="imagens/03.jpg" alt="Crédito Imobiliário">
+        <div class="card-content">
+          <h3>Crédito Imobiliário</h3>
+          <p>Realize o sonho da casa própria com financiamentos sob medida para você.</p>
+          <a href="#contato">Saiba Mais</a>
+        </div>
+      </div>
+      <!-- Produto 3: Crédito Empresarial -->
+      <div class="produto-card">
+        <img src="imagens/04.jpg" alt="Crédito Empresarial">
+        <div class="card-content">
+          <h3>Crédito Empresarial</h3>
+          <p>Impulsione seu negócio com linhas de crédito desenvolvidas para empresas.</p>
+          <a href="#contato">Saiba Mais</a>
+        </div>
+      </div>
+      <!-- Produto 4: Refinanciamento -->
+      <div class="produto-card">
+        <img src="imagens/05.jpg" alt="Refinanciamento">
+        <div class="card-content">
+          <h3>Refinanciamento</h3>
+          <p>Reestruture suas dívidas e obtenha melhores condições para o seu financiamento.</p>
+          <a href="#contato">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section class="contato" id="contato">
+    <h2>Entre em Contato</h2>
     <form action="#" method="post">
       <div class="form-group">
         <label for="nome">Nome Completo</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Digite seu email">
+        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
       </div>
       <div class="form-group">
         <label for="telefone">Telefone</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
-      </div>
-      <div class="form-group">
-        <label for="valor">Valor do Crédito</label>
-        <input type="number" id="valor" name="valor" placeholder="Digite o valor desejado">
+        <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
       </div>
       <div class="form-group" style="flex-basis: 100%;">
-        <label for="mensagem">Como podemos ajudar?</label>
-        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Deixe uma mensagem..."></textarea>
-      </div>
-      <button type="submit">Quero Crédito!</button>
-    </form>
-  </section>
-  
-  <!-- Seção de informações adicionais -->
-  <section class="info-section">
-    <div class="info-text">
-      <h2>Por que escolher a Big New?</h2>
-      <p>
-        Oferecemos soluções personalizadas com atendimento especializado para que você obtenha o crédito que precisa sem burocracia. 
-        Nossos consultores estão prontos para ajudar você a encontrar a melhor opção para o seu perfil.
-      </p>
-    </div>
-    <div class="info-image">
-      <img src="imagens/02.jpg" alt="Ilustração sobre crédito">
-    </div>
-  </section>
-  
-  <!-- Seção de Dados da Big New -->
-  <section class="business-info">
-    <div class="info-container">
-      <h2>Informações da Big New</h2>
-      <div class="info-grid">
-        <div class="info-item">
-          <h3>Horário de Atendimento</h3>
-          <p>Segunda a Sexta: 9:00 às 18:00</p>
-        </div>
-        <div class="info-item">
-          <h3>Telefone</h3>
-          <p>(11) 1234-5678</p>
-        </div>
-        <div class="info-item">
-          <h3>Produtos Atendidos</h3>
-          <p>Crédito Pessoal, Crédito Imobiliário, Crédito Empresarial, Refinanciamento</p>
-        </div>
-        <div class="info-item">
-          <h3>Endereço</h3>
-          <p>Rua Exemplo, 123 - Centro, São Paulo - SP, Brasil</p>
-        </div>
-        <div class="info-item">
-          <h3>Página Segura</h3>
-          <p>Site protegido por SSL</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Seção Galeria com imagens adicionais -->
-  <section class="gallery">
-    <h2>Galeria de Imagens</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="imagens/03.jpg" alt="Imagem 03">
-      </div>
-      <div class="gallery-item">
-        <img src="imagens/04.jpg" alt="Imagem 04">
-      </div>
-      <div class="gallery-item">
-        <img src="imagens/05.jpg" alt="Imagem 05">
-      </div>
-    </div>
-  </section>
-  
-  <!-- Rodapé -->
-  <footer>
-    <p>&copy; 2025 Big New. Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" place
