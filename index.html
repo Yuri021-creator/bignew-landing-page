@@ -1,172 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big New - Soluções Financeiras</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0c0c26;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #13133f;
-            padding: 15px 50px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo {
-            height: 80px;
-        }
-        nav {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            white-space: nowrap;
-        }
-        nav a:last-child {
-            margin-right: 20px;
-        }
-        .hero {
-            text-align: center;
-            padding: 150px 20px;
-            background: url('hero-image.jpg') no-repeat center center/cover;
-            color: white;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .services, .banks {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        .service-card {
-            background: #1c1c48;
-            padding: 20px;
-            border-radius: 10px;
-            width: 280px;
-            text-align: center;
-        }
-        .bank-logo {
-            width: 120px;
-        }
-        .footer {
-            background-color: #13133f;
-            padding: 30px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            text-align: center;
-        }
-        .footer-section {
-            width: 30%;
-        }
-        .footer-section h4 {
-            color: #00bcd4;
-        }
-        .footer a {
-            color: white;
-            display: block;
-            text-decoration: none;
-            margin-top: 5px;
-        }
-        .service-description {
-            margin-top: 20px;
-            text-align: left;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crédito Ágil</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #333;
+      background-color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #00467f;
+      color: #fff;
+      padding: 20px 40px;
+      text-align: center;
+    }
+    header .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .hero {
+      position: relative;
+      height: 60vh;
+      background: url('URL_DA_IMAGEM_HERO_AQUI') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      z-index: 1;
+    }
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .lead-form {
+      background-color: #fff;
+      padding: 40px;
+      margin: -50px auto 40px;
+      max-width: 800px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .lead-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00467f;
+    }
+    .lead-form form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .lead-form .form-group {
+      flex: 1 1 300px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .lead-form label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .lead-form input,
+    .lead-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .lead-form button {
+      padding: 15px 30px;
+      background-color: #00467f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 20px auto 0;
+      display: block;
+    }
+    .lead-form button:hover {
+      background-color: #00335a;
+    }
+    .info-section {
+      padding: 40px;
+      background-color: #e9ecef;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .info-section .info-text {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+    .info-section .info-image {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+    .info-section .info-image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #00467f;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="logo.jpg" alt="Big New" class="logo">
-        <nav>
-            <a href="#sobre">1. Sobre</a>
-            <a href="#servicos">2. Serviços</a>
-            <a href="#bancos">3. Bancos</a>
-            <a href="#blog">4. Blog</a>
-            <a href="#contato">5. Contato</a>
-        </nav>
-    </header>
-    
-    <div class="logo-container">
-        <img src="logo-principal.jpg" alt="Big New - Assessoria">
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">Crédito Ágil</div>
+  </header>
+  
+  <!-- Seção Hero com imagem de fundo -->
+  <section class="hero">
+    <!-- Troque a URL da imagem abaixo para a que desejar -->
+    <div class="hero-content">
+      <h1>Realize seus sonhos com crédito facilitado</h1>
+      <p>Conquiste seus objetivos com taxas competitivas e aprovação rápida</p>
     </div>
-    
-    <section class="hero">
-        <h1>Bem-vindo à Big New</h1>
-        <p>Soluções financeiras confiáveis e seguras para você!</p>
-        <a href="https://wa.me/5511932334083" class="cta-button">Fale Conosco</a>
-    </section>
-    
-    <div class="container">
-        <section id="sobre">
-            <h2 class="section-title">Sobre a Big New</h2>
-            <p>Somos especializados em crédito consignado, consórcios e antecipação de FGTS, sempre com as melhores taxas do mercado.</p>
-        </section>
-        <section id="servicos">
-            <h2 class="section-title">Nossos Serviços</h2>
-            <div class="services">
-                <div class="service-card">
-                    <h3>1. Empréstimo Consignado</h3>
-                    <p class="service-description">Solução financeira com taxas reduzidas para aposentados e pensionistas.</p>
-                </div>
-                <div class="service-card">
-                    <h3>2. Consórcio</h3>
-                    <p class="service-description">A melhor forma de adquirir bens de alto valor sem juros.</p>
-                </div>
-                <div class="service-card">
-                    <h3>3. Antecipação do FGTS</h3>
-                    <p class="service-description">Antecipe seu saldo do FGTS sem burocracia e com segurança.</p>
-                </div>
-                <div class="service-card">
-                    <h3>4. Car Equity</h3>
-                    <p class="service-description">Empréstimo com garantia de veículo, com taxas atrativas.</p>
-                </div>
-            </div>
-        </section>
+  </section>
+  
+  <!-- Seção de formulário para captação de leads -->
+  <section class="lead-form">
+    <h2>Solicite seu crédito agora</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu email">
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+      </div>
+      <div class="form-group">
+        <label for="valor">Valor do Crédito</label>
+        <input type="number" id="valor" name="valor" placeholder="Digite o valor desejado">
+      </div>
+      <div class="form-group" style="flex-basis: 100%;">
+        <label for="mensagem">Como podemos ajudar?</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Deixe uma mensagem..."></textarea>
+      </div>
+      <button type="submit">Quero Crédito!</button>
+    </form>
+  </section>
+  
+  <!-- Seção de informações adicionais -->
+  <section class="info-section">
+    <div class="info-text">
+      <h2>Por que escolher a Crédito Ágil?</h2>
+      <p>
+        Oferecemos soluções personalizadas com atendimento especializado para que você obtenha o crédito que precisa sem burocracia. 
+        Nossos consultores estão prontos para ajudar você a encontrar a melhor opção para o seu perfil.
+      </p>
     </div>
-    
-    <footer class="footer">
-        <div class="footer-section">
-            <h4>Contato</h4>
-            <p><strong>Telefone:</strong> <a href="https://wa.me/5511932334083">(11) 93233-4083</a></p>
-            <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 08h às 17h</p>
-        </div>
-        <div class="footer-section">
-            <h4>Segurança</h4>
-            <p>Site seguro com certificado SSL, garantindo sua privacidade e segurança em todas as transações.</p>
-        </div>
-        <div class="footer-section">
-            <h4>Informações Legais</h4>
-            <p><strong>Endereço:</strong> Av. Exemplo, 123 - Centro, São Paulo - SP, 01000-000</p>
-            <p><strong>CNPJ:</strong> 52.149.352/0001-07</p>
-            <p>&copy; 2024 Big New - Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <div class="info-image">
+      <!-- Troque a URL abaixo para a imagem ilustrativa desejada -->
+      <img src="URL_DA_IMAGEM_INFO_AQUI" alt="Ilustração sobre crédito">
+    </div>
+  </section>
+  
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Crédito Ágil. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
