@@ -40,9 +40,12 @@
             font-size: 16px;
             white-space: nowrap;
         }
+        nav a:last-child {
+            margin-right: 20px;
+        }
         .hero {
             text-align: center;
-            padding: 120px 20px;
+            padding: 150px 20px;
             background: url('hero-image.jpg') no-repeat center center/cover;
             color: white;
         }
@@ -92,19 +95,27 @@
             text-decoration: none;
             margin-top: 5px;
         }
+        .service-description {
+            margin-top: 20px;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="logo.jpg" alt="Big New" class="logo">
         <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#bancos">Bancos</a>
-            <a href="#blog">Blog</a>
-            <a href="#contato">Contato</a>
+            <a href="#sobre">1. Sobre</a>
+            <a href="#servicos">2. Serviços</a>
+            <a href="#bancos">3. Bancos</a>
+            <a href="#blog">4. Blog</a>
+            <a href="#contato">5. Contato</a>
         </nav>
     </header>
+    
+    <div class="logo-container">
+        <img src="logo-principal.jpg" alt="Big New - Assessoria">
+    </div>
     
     <section class="hero">
         <h1>Bem-vindo à Big New</h1>
@@ -116,6 +127,27 @@
         <section id="sobre">
             <h2 class="section-title">Sobre a Big New</h2>
             <p>Somos especializados em crédito consignado, consórcios e antecipação de FGTS, sempre com as melhores taxas do mercado.</p>
+        </section>
+        <section id="servicos">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>1. Empréstimo Consignado</h3>
+                    <p class="service-description">Solução financeira com taxas reduzidas para aposentados e pensionistas.</p>
+                </div>
+                <div class="service-card">
+                    <h3>2. Consórcio</h3>
+                    <p class="service-description">A melhor forma de adquirir bens de alto valor sem juros.</p>
+                </div>
+                <div class="service-card">
+                    <h3>3. Antecipação do FGTS</h3>
+                    <p class="service-description">Antecipe seu saldo do FGTS sem burocracia e com segurança.</p>
+                </div>
+                <div class="service-card">
+                    <h3>4. Car Equity</h3>
+                    <p class="service-description">Empréstimo com garantia de veículo, com taxas atrativas.</p>
+                </div>
+            </div>
         </section>
     </div>
     
